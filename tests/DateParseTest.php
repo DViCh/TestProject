@@ -12,21 +12,21 @@ class DateParseTest extends PHPUnit\Framework\TestCase
         $this->assertTrue(true);
     }
 
-    public function testNoInput() // Case with no input - ArgumentCountError.
+    public function testDateParseNoInput() // Case with no input - ArgumentCountError.
     {
         $DateParse = new DateParseClass();
         $this->expectException(ArgumentCountError::class);
         $output = $DateParse->DateParse();
     }
 
-    public function testIncorrectOutput() // Is null if strtotime returns false.
+    public function testDateParseIncorrectOutput() // Is null if strtotime returns false.
     {
         $DateParse = new DateParseClass();
         $output = $DateParse->DateParse("123");
         $this->assertnull($output);
     }
 
-    public function testCorrectOutput() // Assert correct output is string from strtotime() output;
+    public function testDateParseCorrectOutput() // Assert correct output is string from strtotime() output;
     {
         $DateParse = new DateParseClass();
         $output = $DateParse->DateParse("Last Monday of October 2021");

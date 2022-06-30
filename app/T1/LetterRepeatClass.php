@@ -24,7 +24,7 @@ epidemic
 The function must be in a dedicated class and must be fully unit tested.
 
 Tests
-Input must be string
+Input must be string or processable
 Valid Output - Return TRUE if correct input
 Incorrect Output - Return FALSE if incorrect input
 
@@ -36,17 +36,25 @@ PHP returns 1 if TRUE, empty if FALSE
 
 */
 
-namespace Exercise;
+namespace App;
 
 class LetterRepeatClass
 {
     public function LetterRepeat(string $input): bool
     {
         $word = (strtolower($input));
-        $chararray = str_split(preg_replace('/[^a-z]/','',$word));
+        $sanitizeword = preg_replace('/[^a-z]/','',$word);
+
+        if(!$sanitizeword) { // If empty after stripping nonalphabetic, not valid word.
+            return FALSE;
+        }
+
+        $chararray = str_split($sanitizeword);
         $array = array();
+
+
         foreach ($chararray as $char) {
-            if (isset($array[$char])) {
+            if (isset($array[$char])) { //If key value pair exists after initialisation
                 return FALSE;
             }
             else {

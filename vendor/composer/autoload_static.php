@@ -30,6 +30,10 @@ class ComposerStaticInit3f9d9400a2591e78917de469194938d4
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -59,15 +63,9 @@ class ComposerStaticInit3f9d9400a2591e78917de469194938d4
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'U' => 
+        'App\\' => 
         array (
-            'UnitTestFiles' => 
-            array (
-                0 => __DIR__ . '/../..' . '/',
-            ),
+            0 => __DIR__ . '/../..' . '/TestProject/app',
         ),
     );
 
@@ -703,7 +701,6 @@ class ComposerStaticInit3f9d9400a2591e78917de469194938d4
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3f9d9400a2591e78917de469194938d4::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3f9d9400a2591e78917de469194938d4::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit3f9d9400a2591e78917de469194938d4::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit3f9d9400a2591e78917de469194938d4::$classMap;
 
         }, null, ClassLoader::class);

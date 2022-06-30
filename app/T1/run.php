@@ -2,7 +2,8 @@
 
 require 'LetterRepeatClass.php';
 
-$LetterRepeat = new Exercise\LetterRepeatClass();
+$LetterRepeat = new App\LetterRepeatClass();
+
 
 if (isset($argv[1])) {
     print ($LetterRepeat->LetterRepeat($argv[1]));

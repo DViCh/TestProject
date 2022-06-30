@@ -36,7 +36,7 @@ PHP returns 1 if TRUE, empty if FALSE
 
 */
 
-namespace Exercise\E1;
+namespace Exercise;
 
 class LetterRepeatClass
 {

@@ -1,6 +1,6 @@
 TESTPROJECT.
 
-Run ./vendor/bin/phpunit tests for unit tests.
+Run ./vendor/bin/phpunit tests on root directory for unit tests.
 
 
 

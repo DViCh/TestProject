@@ -3,6 +3,9 @@ TESTPROJECT.
 Run ./vendor/bin/phpunit tests for unit tests.
 
 
+
+----------------------------------------------
+
 This test has been drafted to assess your technical ability to solve standard problems. We will mostly look at the solutions chosen and the quality of the code provided, rather than the quantity of code produced.
 
  
